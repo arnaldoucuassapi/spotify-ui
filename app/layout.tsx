@@ -1,11 +1,15 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import './globals.css';
+import type { Metadata } from 'next';
+import { Inter } from 'next/font/google';
+
+import { Leftbar } from '@/components/Leftbar';
+import { Rightbar } from '@/components/Rightbar';
+import { Player } from '@/components/Player';
 
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Spotify UI',
+  title: 'Spotify UI Clone',
   description: '',
 }
 
@@ -16,7 +20,17 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <div>
+          <Leftbar />
+          <main>
+            {children}
+          </main>
+          <Rightbar />
+        </div>
+
+        <Player />
+      </body>
     </html>
   )
 }
