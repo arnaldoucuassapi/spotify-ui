@@ -20,8 +20,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
-        <div className="flex flex-1 bg-black h-screen text-zinc-400">
+      <body className={`${inter.className} flex flex-col bg-black text-zinc-400`}>
+        <div className="flex flex-1  p-2">
           <Leftbar />
           <main>
             {children}
