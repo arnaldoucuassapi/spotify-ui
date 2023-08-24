@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export function Player() {
   return (
-    <div className="w-full flex flex items-center justify-between bg-zinc-900 p-4">
+    <div className="w-full flex items-center justify-between bg-zinc-900 p-4">
       <div className="flex items-center space-x-8">
         <div className="flex items-center space-x-4">
           <Image className="h-[50px] cover rounded" width={50} height={60} src="/thumbnail.jpg" alt="Music Thumbnail" />
